@@ -1,15 +1,56 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        System.out.print("Digite o seu nome: ");
+        String nome = scanner.nextLine();
+
+        System.out.print("Digite o seu número da chamada: ");
+        int numerodechamada = scanner.nextInt();
+
+        System.out.println("----------------------------------------");
+
+        System.out.print("Digite a nota da prova 1: ");
+        double notaum = scanner.nextDouble();
+
+        System.out.print("Digite a nota da prova 2: ");
+        double notadois = scanner.nextDouble();
+
+        System.out.print("Digite a nota da prova 3: ");
+        double notatres = scanner.nextDouble();
+
+        System.out.print("Digite a nota da prova 4: ");
+        double notaquatro = scanner.nextDouble();
+
+
+
+
+        System.out.println("----------------------------------------");
+        double calculomedia= (notaum + notadois + notatres + notaquatro) / 4;
+        String mediafinal = String.format("%.2f",calculomedia);
+
+
+
+
+
+        System.out.println("Boa tarde, " + nome + ", de número de chamada: " + numerodechamada);
+        System.out.println("Suas notas foram respectivamente: ");
+        System.out.println("Primeira nota: " +notaum);
+        System.out.println("Segunda nota: " +notadois);
+        System.out.println("Terceira nota: " + notatres);
+        System.out.println("Quarta nota: " +notaquatro);
+        System.out.println("----------------------------------------");
+        System.out.println("Juntando as notas anteriores, e fazendo as operações necessárias, chegamos ao resultado da sua Média abaixo");
+        System.out.println("Media Final: " + mediafinal);
+
+        if (calculomedia >= 5){
+            System.out.print("Parabéns você foi aprovado!!");
+        } else if (calculomedia <=4){
+            System.out.print("Infelizmente você foi reprovado...");
+        } else  {
+            System.out.print("Infelizmente você ficou de recuperação");
         }
     }
-}
+    }
